@@ -24,9 +24,6 @@
         <td class="process">
           <% if job['queue'] %>
             <code><%= job['payload']['class'] %></code>
-            <% if not job['run_at'].nil? %>
-            <small><%= "#{time_ago_in_words job['run_at']} ago" %></small>
-            <% end %>
           <% else %>
             <span class="waiting">Waiting for a job...</span>
           <% end %>

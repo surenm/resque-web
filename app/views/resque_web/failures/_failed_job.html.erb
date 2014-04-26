@@ -41,7 +41,7 @@
     <dd class="error">
       <% if job['backtrace'] %>
         <a href="#" class="backtrace"><%= job['error'] %></a>
-        <%= if job['backtrace'].respond_to? 'join' %>
+        <% if job['backtrace'].respond_to? 'join' %>
         <pre style='display:none'><%=h job['backtrace'].join("\n") %></pre>
         <% else %>
         <pre style='display:none'><%=h job['backtrace'] %></pre>
